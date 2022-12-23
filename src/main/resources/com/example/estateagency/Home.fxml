@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #333b3c; -fx-opacity: 1;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.estateagency.HomeController">
+   <children>
+      <ImageView fitHeight="102.0" fitWidth="238.0" layoutX="62.0" layoutY="337.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../Home BG.jpg" />
+      </ImageView>
+      <BorderPane prefHeight="600.0" prefWidth="800.0">
+         <left>
+            <AnchorPane prefHeight="600.0" prefWidth="250.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" layoutX="147.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="YOUR">
+                     <font>
+                        <Font name="Gabriola" size="23.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="18.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MANAGE">
+                     <font>
+                        <Font name="Gabriola" size="32.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="31.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REAL ESTATE !">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Text>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="600.0" prefWidth="550.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button layoutX="180.0" layoutY="463.0" mnemonicParsing="false" onAction="#switchToSignUp" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="TO ADD A PROFILE CLICK HERE" textFill="WHITE" underline="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Button>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="145.0" layoutY="107.0" prefHeight="304.5" prefWidth="300.0">
+                     <content>
+                        <AnchorPane prefHeight="297.0" prefWidth="300.0" style="-fx-background-color: #333b3c;">
+                           <children>
+                              <MenuButton fx:id="menu1" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutY="1.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="   " textFill="WHITE">
+                                <items>
+                                  <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <PasswordField fx:id="password1" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: none;" />
+                                       </graphic>
+                                    </MenuItem>
+                                  <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="loginBtn1" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#signIn" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Sign In">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                </items>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <Text fx:id="text1" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton fx:id="menu2" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutY="51.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="   " textFill="WHITE">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <PasswordField fx:id="password2" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: none;" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="loginBtn2" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#signIn" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Sign In">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <Text fx:id="text2" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton fx:id="menu3" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutY="101.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="   " textFill="WHITE">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <PasswordField fx:id="password3" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: none;" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="loginBtn3" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#signIn" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Sign In">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <Text fx:id="text3" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton fx:id="menu4" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutY="151.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="   " textFill="WHITE">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <PasswordField fx:id="password4" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: none;" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="loginBtn4" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#signIn" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Sign In">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <Text fx:id="text4" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton fx:id="menu5" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutY="201.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="   " textFill="WHITE">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <PasswordField fx:id="password5" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: none;" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="loginBtn5" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#signIn" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Sign In">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <Text fx:id="text5" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </MenuButton>
+                              <MenuButton fx:id="menu6" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutY="251.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="   " textFill="WHITE">
+                                 <items>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <PasswordField fx:id="password6" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: none;" />
+                                       </graphic>
+                                    </MenuItem>
+                                    <MenuItem mnemonicParsing="false">
+                                       <graphic>
+                                          <Button fx:id="loginBtn6" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#signIn" prefHeight="30.0" prefWidth="300.0" style="-fx-background-color: transparent;" text="Sign In">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                          </Button>
+                                       </graphic>
+                                    </MenuItem>
+                                 </items>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <Text fx:id="text6" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font>
+                                    </Text>
+                                 </graphic>
+                              </MenuButton>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#333b3c" height="289.0" layoutX="268.0" stroke="#333b3c" strokeType="INSIDE" width="65.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <Button layoutX="200.0" layoutY="72.0" mnemonicParsing="false" onAction="#addProfile" style="-fx-background-color: transparent;" text="CLICK HERE TO SHOW PROFILES" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Label fx:id="wrongLogin" layoutX="155.0" layoutY="424.0" prefHeight="34.0" prefWidth="275.0" textFill="RED">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn" layoutX="150.0" layoutY="423.0" mnemonicParsing="false" onAction="#sign" prefHeight="31.0" prefWidth="292.0" style="-fx-background-color: transparent;" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane prefHeight="600.0" prefWidth="15.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Line endX="43.999969482421875" endY="178.53646850585938" layoutX="-25.0" layoutY="195.0" startX="43.999969482421875" startY="55.679317474365234" stroke="WHITE" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

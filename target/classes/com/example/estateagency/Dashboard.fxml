@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.estateagency.DashboardController">
+   <left>
+      <VBox prefHeight="600.0" prefWidth="225.0" style="-fx-background-color: #333b3c;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="0.0" prefWidth="19.0" />
+            <Button fx:id="plotsBtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#PanelButtonAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" text="Plots" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="POSBtn" contentDisplay="CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#PanelButtonAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" text="POS" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="expandituresBtn" contentDisplay="CENTER" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#PanelButtonAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" text="Expanditures" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="summaryBtn" contentDisplay="CENTER" layoutX="10.0" layoutY="111.0" mnemonicParsing="false" onAction="#PanelButtonAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-color: transparent;" text="Summary" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="980.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="POSPane" prefHeight="600.0" prefWidth="980.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="kxh bhi" />
+               </children></Pane>
+            <Pane fx:id="expandituresPane" prefHeight="600.0" prefWidth="980.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="bht kxh" />
+               </children></Pane>
+            <Pane fx:id="summaryPane" prefHeight="600.0" prefWidth="980.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ala" />
+               </children></Pane>
+            <Pane fx:id="plotsPane" prefHeight="600.0" prefWidth="980.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <TabPane prefHeight="600.0" prefWidth="980.0" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab style="-fx-background-color: transparent; -fx-cursor: hand;" text="          Plots          ">
+                           <content>
+                              <TilePane prefHeight="600.0" prefWidth="980.0" style="-fx-background-color: transparent;">
+                                 <children>
+                                    <ScrollPane hbarPolicy="NEVER" prefHeight="571.0" prefWidth="980.0" style="-fx-background-color: transparent;">
+                                       <content>
+                                          <BorderPane prefHeight="560.0" prefWidth="980.0">
+                                             <bottom>
+                                                <Button contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToAddPlotPanel" prefHeight="46.0" prefWidth="149.0" style="-fx-background-color: tranparent;" text="Add New Plots" underline="true" BorderPane.alignment="CENTER">
+                                                   <cursor>
+                                                      <Cursor fx:constant="HAND" />
+                                                   </cursor></Button>
+                                             </bottom>
+                                             <center>
+                                                <TableView prefHeight="514.0" prefWidth="980.0" style="-fx-background-color: transparent;" BorderPane.alignment="CENTER">
+                                                  <columns>
+                                                    <TableColumn editable="false" prefWidth="100.0" resizable="false" sortable="false" text="Plot Number" />
+                                                    <TableColumn editable="false" prefWidth="100.0" resizable="false" sortable="false" text="Area" />
+                                                      <TableColumn editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Location" />
+                                                      <TableColumn editable="false" prefWidth="200.0" resizable="false" sortable="false" text="Owner" />
+                                                      <TableColumn editable="false" prefWidth="130.0" resizable="false" sortable="false" text="Price" />
+                                                      <TableColumn editable="false" prefWidth="115.0" resizable="false" sortable="false" text="Sell" />
+                                                  </columns>
+                                                </TableView>
+                                             </center>
+                                          </BorderPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children></TilePane>
+                           </content>
+                      </Tab>
+                      <Tab style="-fx-background-color: transparent; -fx-cursor: hand;" text="          Map          " />
+                    </tabs>
+                  </TabPane>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
